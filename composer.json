@@ -9,14 +9,21 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "barryvdh/laravel-snappy": "^0.4.4",
+        "cybercog/laravel-ban": "^4.0",
         "fideloper/proxy": "^4.0",
         "jenssegers/agent": "^2.6",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
+        "maatwebsite/excel": "^3.1",
         "owen-it/laravel-auditing": "^9.2",
+        "propaganistas/laravel-phone": "^4.2",
         "santigarcor/laratrust": "5.2.*",
         "spatie/laravel-medialibrary": "^7.0.0",
-        "ylsideas/subscribable-notifications": "^1.0"
+        "spatie/laravel-tags": "^2.4",
+        "webpatser/laravel-uuid": "^3.0",
+        "ylsideas/subscribable-notifications": "^1.0",
+        "laravel/nova": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -63,5 +70,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova"
+        }
+    ]
 }

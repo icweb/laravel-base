@@ -4,6 +4,12 @@
 - [Media Library](https://github.com/spatie/laravel-medialibrary)
 - [HTTP Logger](https://github.com/spatie/laravel-http-logger)
 - [Subscribable Notifications](https://github.com/ylsideas/subscribable-notifications)
+- [Laravel UUID](https://github.com/webpatser/laravel-uuid)
+- [Laravel Snappy](https://github.com/barryvdh/laravel-snappy)
+- [Laravel Excel](https://github.com/Maatwebsite/Laravel-Excel)
+- [Laravel Phone](https://github.com/Propaganistas/Laravel-Phone)
+- [Laravel Ban](https://github.com/cybercog/laravel-ban)
+- [Laravel Tags](https://github.com/spatie/laravel-tags)
 
 ### Laravel Setup
 - Authentication scaffolding installed

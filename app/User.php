@@ -2,17 +2,24 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laratrust\Traits\LaratrustUserTrait;
+use Spatie\Tags\HasTags;
 use YlsIdeas\SubscribableNotifications\MailSubscriber;
+use Cog\Contracts\Ban\Bannable as BannableContract;
+use Cog\Laravel\Ban\Traits\Bannable;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmail, BannableContract
 {
     use LaratrustUserTrait;
     use Notifiable;
     use MailSubscriber;
+    use Bannable;
+    use SoftDeletes;
+    use HasTags;
 
     /**
      * The attributes that are mass assignable.
@@ -39,5 +46,6 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'deleted_at' => 'datetime',
     ];
 }
