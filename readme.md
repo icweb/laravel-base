@@ -12,6 +12,7 @@
 - [Laravel Tags](https://github.com/spatie/laravel-tags)
 
 ### Laravel Setup
+- Nova included
 - Authentication scaffolding installed
 
 ### Model Setup

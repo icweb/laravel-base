@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-Route::group(['middleware' => ['auth', 'verified']], function(){
+Route::group(['middleware' => ['auth', 'verified', 'forbid-banned-user']], function(){
 
     Route::get('/home', 'HomeController@index')->name('home');
 
